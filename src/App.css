@@ -27,6 +27,7 @@ body{
 .pizza-container:hover{
   transform-origin: top;
   transform: scale(101%);
+  background-color: rgba(255, 137, 137, 0.596);
 }
 
 .pizza{
@@ -39,16 +40,18 @@ body{
 
 .navication{
   display: flex;
-  position: relative;
+  position: sticky;
+  top: 3px;
   width: auto;
   height: 80px;
-  margin: 10px;
+  margin: 10px 22px 10px 22px;
   align-items: center;
   justify-content: center;
   border: 1px solid blue;
   border-radius: 10px;
-  background-color: rgba(26, 248, 56, 0.925);
+  background-color: rgba(26, 248, 56, 0.959);
 }
+
 
 .app-name{
   font-size: 40px;

@@ -1,4 +1,4 @@
-// import React from "react";/
+import React from "react";
 import './App.css';
 import {Switch,Route,Routes,Navigate,Redirect,Link} from "react-router-dom";
 
@@ -17,6 +17,14 @@ function App(){
     "name" : "Margherita Pizza Recipe",
     "pic" : "https://i.ndtvimg.com/i/2015-02/cheese-pizza_625x350_71424681540.jpg"
     }];
+
+  const offer_items = [{
+    "pic" : "https://image.shutterstock.com/image-vector/pepperoni-cheese-pizza-banner-ads-260nw-1519934609.jpg",
+    "name" : "offer picture"
+  },{
+    "pic" : "https://i.pinimg.com/1200x/b3/c2/1d/b3c21df9785774a53d8d5b25cd53e666.jpg",
+    "name" : "offer picture"
+  }]
 
   return(
 
@@ -39,19 +47,17 @@ function App(){
         <Pizza name={name}
         pic = {pic}/> ))}
       </section>}/>
-  <Route path='/*'  element={<Notfound/>}/>
-  <Route path='/signin' exact element={"signin"}/>     
+  <Route path='/offer' exact element={
+     <section className="offer-list">
+     {offer_items.map(({name,pic})=>(
+       <Offer name={name}
+       pic = {pic}/> ))}
+     </section>}/>
+  <Route path='/login' exact element={"login"}/> 
+  <Route path='/signin' exact element={"signin"}/>  
+  <Route path='/*'  element={<Notfound/>}/>   
 </Routes>
 
-
-
-
-
-    {/* <Pizza/> */}
-    {/* <Routes> */}
-      {/* <Route path="/" exact element={<Pizza/>}/> */}
-      {/* <Route path="/home" exact element={<Pizza/>}/> */}
-    {/* </Routes> */}
 </div>
   )
 }
@@ -59,11 +65,22 @@ function App(){
 export default App;
 
 function Notfound(){
-  const style = {width:"90%",height:"55%",margin:"10px"};
+  const style = {width:"95%",height:"55%",margin:"10px"};
   return (
     <img style={style}
     src="https://www.lifewire.com/thmb/fS8MEzmEgg0bV5BGtTVDlHpIdGg=/3000x1687/smart/filters:no_upscale()/404-not-found-error-explained-2622936-Final-fde7be1b7e2e499c9f039d97183e7f52.jpg"
     alt='404 not found'/>
+  )
+}
+
+function Offer({name,pic}){
+  const style = {width:"85%",height:"55%",margin:"10px"};
+  return (
+    <div className="offer-container">
+      <img style={style}
+        src = {pic}
+        alt = {name} />
+    </div>
   )
 }
 
