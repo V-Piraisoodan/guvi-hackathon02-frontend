@@ -17,7 +17,7 @@ body{
 }
 
 .pizza-container{
-  height: 380px;
+  height: 400px;
   width: 320px;
   border-bottom: 1px solid blue;
   border-radius: 10px;
@@ -47,9 +47,9 @@ body{
   margin: 10px 22px 10px 22px;
   align-items: center;
   justify-content: center;
-  border: 1px solid blue;
+  z-index: 1;
   border-radius: 10px;
-  background-color: rgba(26, 248, 56, 0.959);
+  background-color: rgba(26, 248, 56, 0.986);
 }
 
 
@@ -85,4 +85,32 @@ body{
 }
 .n-bar:hover{
   text-decoration:underline;
+}
+
+.pizza-name{
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button{
+  background-color: rgb(2, 138, 2);
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 35px;
+  width: 100px;
+}
+
+.button:hover{
+  border: 2px solid rgb(35, 21, 236);
+}
+
+.button:active{
+  border: 2px solid rgb(35, 21, 236);
+  color: rgb(2, 138, 2);
+  font-weight: bold;
+  background-color: rgb(248, 227, 227);
 }

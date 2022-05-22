@@ -16,6 +16,18 @@ function App(){
     },{
     "name" : "Margherita Pizza Recipe",
     "pic" : "https://i.ndtvimg.com/i/2015-02/cheese-pizza_625x350_71424681540.jpg"
+    },{
+      "name" : "Non Veg Supreme",
+      "pic" : "https://www.dominos.co.in/files/items/Non-Veg_Supreme.jpg"
+    },{
+      "name" : "Chicken Dominator",
+      "pic" : "https://www.dominos.co.in/files/items/Dominator.jpg"
+    },{
+      "name" : "Chicken Fiesta",
+      "pic" : "https://www.dominos.co.in/files/items/chunky-chicken.png"
+    },{
+      "name" : "Paneer & Onion",
+      "pic" : "https://www.dominos.co.in/files/items/Paneer_Special.jpg"
     }];
 
   const offer_items = [{
@@ -92,6 +104,7 @@ function Pizza({name,pic})
         src = {pic}
         alt = {name} />
       <p className="pizza-name">{name}</p>
+      <button className="button">Order</button>
     </div>
   )
 }
